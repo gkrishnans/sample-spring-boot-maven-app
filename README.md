@@ -6,7 +6,7 @@
 git clone https://github.com/gkrishnans/sample-spring-boot-maven-app </br>
 cd sample-spring-boot-maven-app</br>
 ./mvnw install</br>
-./mvnw spring-boot:run</br>
+./mvnw spring-boot:run -Dspring-boot.run.arguments=--server.port=8010</br>
 
 </br>
 
