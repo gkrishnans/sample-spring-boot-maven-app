@@ -8,7 +8,7 @@ cd sample-spring-boot-maven-app</br>
 ./mvnw install</br>
 ./mvnw spring-boot:run</br>
 
-</br></br>
+</br>
 
 **you can access the application at below URL**
 </br>
