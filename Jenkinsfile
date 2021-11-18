@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage ('maven installation') {
             steps {
+                  sh "ls"
                   sh "./mvnw install"
             }
         }
