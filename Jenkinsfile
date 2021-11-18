@@ -11,7 +11,7 @@ pipeline {
         stage ('build Stage') {
             steps
             {
-                  sh "./mvnw spring-boot:run -Dspring-boot.run.arguments=--server.port=8010"                
+                  sh "./mvnw spring-boot:run
             }
         }
 
@@ -24,5 +24,10 @@ pipeline {
             }
         }
 **/
+        
+        
     }
 }
+
+
+//sh "./mvnw spring-boot:run -Dspring-boot.run.arguments=--server.port=8010"                                
