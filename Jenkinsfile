@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     stages {
         stage ('maven installation') {
             steps {
@@ -9,7 +8,10 @@ pipeline {
         }
 
         stage ('build Stage') {
-                  sh "./mvnw spring-boot:run -Dspring-boot.run.arguments=--server.port=8010"
+            steps
+            {
+                  sh "./mvnw spring-boot:run -Dspring-boot.run.arguments=--server.port=8010"                
+            }
         }
 
 /**
