@@ -1,7 +1,5 @@
 # sample spring boot maven app
 
-
-</br>
 **steps to run application**
 </br>
 
