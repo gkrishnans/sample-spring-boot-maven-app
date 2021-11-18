@@ -15,3 +15,4 @@ cd sample-spring-boot-maven-app</br>
 **you can access the application at below URL**
 </br>
 http://localhost:8080/welcome
+
