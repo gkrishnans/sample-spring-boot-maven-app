@@ -14,6 +14,7 @@ pipeline {
             {
                   //sh "./mvnw spring-boot:run"
                   echo "build stage.... "
+                  echo "Build number is ${currentBuild.number}"
             }
         }
 
