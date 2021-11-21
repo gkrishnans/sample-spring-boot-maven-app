@@ -13,7 +13,7 @@ pipeline {
             steps
             {
                   //sh "./mvnw spring-boot:run"
-                  echo "build stage...."
+                  echo "build stage.... "
             }
         }
 
