@@ -4,14 +4,16 @@ pipeline {
         stage ('maven installation') {
             steps {
                   sh "ls"
-                  sh "./mvnw install"
+                  //sh "./mvnw install"
+                  echo "maven installation....."
             }
         }
 
         stage ('build Stage') {
             steps
             {
-                  sh "./mvnw spring-boot:run"
+                  //sh "./mvnw spring-boot:run"
+                  echo "build stage...."
             }
         }
 
