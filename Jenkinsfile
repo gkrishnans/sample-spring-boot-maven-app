@@ -30,7 +30,7 @@ pipeline {
                   echo "Build number is ${currentBuild.number} arun idiot"
                   echo "arun idiot.."
                   withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: '9914ec3e-2984-4264-8f0b-71cb702c0a0f', usernameVariable: 'gkrishnans', passwordVariable: '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']]) {
-                    sh("git tag -a built-${currentBuild.number} -m 'built-${currentBuild.number}'")
+                    sh("git tag -a built-${currentBuild.number}")
                     sh("git push https://github.com/gkrishnans/sample-spring-boot-maven-app --tags")
             }
         }
