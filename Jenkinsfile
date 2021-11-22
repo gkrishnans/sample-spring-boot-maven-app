@@ -24,6 +24,7 @@ pipeline {
             steps
             {
                   //sh "./mvnw spring-boot:run"
+                  echo "build stage.... arun idiot"
 
                   sh "git tag built-${currentBuild.number} "
                   sh "git push origin --tag"
