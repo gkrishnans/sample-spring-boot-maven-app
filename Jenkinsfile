@@ -24,17 +24,13 @@ pipeline {
             steps
             {
                   //sh "./mvnw spring-boot:run"
-                  
+
                   sh "git tag built-${currentBuild.number} "
                   sh "git push origin --tag"
                   echo "Build number is ${currentBuild.number}"
-                  withCredentials([[$class: 'UsernamePasswordMultiBinding', 
-                  usernameVariable: 'gkrishnans', 
-                  passwordVariable: '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']]) {
-                    //sh("git config user.email ${repositoryCommiterEmail}")
-                    //sh("git config user.name '${repositoryCommiterUsername}'")
+                  withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: '9914ec3e-2984-4264-8f0b-71cb702c0a0f', usernameVariable: 'gkrishnans', passwordVariable: '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']]) {
                     sh("git tag -a built-${currentBuild.number} -m 'built-${currentBuild.number}")
-                }
+                    sh("git push https://github.com/gkrishnans/sample-spring-boot-maven-app --tags")
             }
         }
 
