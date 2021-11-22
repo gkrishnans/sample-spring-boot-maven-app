@@ -26,7 +26,6 @@ pipeline {
                   //sh "./mvnw spring-boot:run"
                   echo "build stage.... arun idiot"
 
-                  sh "git tag built-${currentBuild.number} "
                   echo "Build number is ${currentBuild.number} arun idiot"
                   echo "arun idiot.."
                   withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: '9914ec3e-2984-4264-8f0b-71cb702c0a0f', usernameVariable: 'gkrishnans', passwordVariable: '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']]) {
