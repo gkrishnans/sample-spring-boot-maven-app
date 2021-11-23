@@ -36,7 +36,7 @@ pipeline {
                         echo "*2"
                         sh "git push https://github.com/gkrishnans/sample-spring-boot-maven-app --tags"                   
                         echo "*3"
-                         //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
+                         //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
                   }
         }
 
