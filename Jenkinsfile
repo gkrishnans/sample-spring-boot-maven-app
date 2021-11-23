@@ -30,8 +30,6 @@ pipeline {
                   echo "arun idiot.."
                   withCredentials([gitUsernamePassword(credentialsId: '9914ec3e-2984-4264-8f0b-71cb702c0a0f', gitToolName: 'Default')]) {
                     sh('''
-                        git config user.name 'gkrishnans'
-                        git config user.email 'gokulakrishnanaji@gmail.com' 
                         git tag -a built-${currentBuild.number}
                         git push https://github.com/gkrishnans/sample-spring-boot-maven-app --tags                   
                     ''')
