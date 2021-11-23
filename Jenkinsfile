@@ -28,7 +28,7 @@ pipeline {
 
                   echo "Build number is ${currentBuild.number} arun idiot"
                   echo "arun idiot.."
-                  withCredentials([gitUsernamePassword(credentialsId: '9914ec3e-2984-4264-8f0b-71cb702c0a0f', gitToolName: 'Default')]) {
+                  withCredentials([gitUsernamePassword(credentialsId: 'nrml-credentials', gitToolName: 'Default')]) {
                         
                         echo "*1"
                         sh "git tag -a built-${currentBuild.number} -m 'helow'"
