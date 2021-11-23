@@ -28,13 +28,13 @@ pipeline {
 
                   echo "Build number is ${currentBuild.number} arun idiot"
                   echo "arun idiot.."
-                  withCredentials([gitUsernamePassword(credentialsId: 'GIT_USER_PASS', gitToolName: 'git-tool')]) {
+                  withCredentials([gitUsernamePassword(credentialsId: 'GIT_USER_PASSWORD', gitToolName: 'git-tool')]) {
                         sh "git config user.name 'gkrishnans'"
                         sh "git config user.email 'gokulakrishnanaji@gmail.com'" 
                         echo "*1"
                         sh "git tag -a built-${currentBuild.number} -m 'helow'"
                         echo "*2"
-                        
+
                         sh "git push https://github.com/gkrishnans/sample-spring-boot-maven-app --tags"                   
                         echo "*3"
 
