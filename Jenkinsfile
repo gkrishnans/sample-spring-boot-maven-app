@@ -31,7 +31,7 @@ pipeline {
                   withCredentials([gitUsernamePassword(credentialsId: '9914ec3e-2984-4264-8f0b-71cb702c0a0f', gitToolName: 'Default')]) {
                         
                         echo "*1"
-                        sh "git tag -a built-${currentBuild.number}"
+                        sh "git tag -a built-${currentBuild.number} -m 'helow'"
                         echo "*2"
                         sh "git push https://github.com/gkrishnans/sample-spring-boot-maven-app --tags"                   
                         echo "*3"
