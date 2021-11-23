@@ -34,11 +34,9 @@ pipeline {
                         echo "*1"
                         sh "git tag -a built-${currentBuild.number} -m 'helow'"
                         echo "*2"
-                        sh "git push https://github.com/gkrishnans/sample-spring-boot-maven-app --tags"                   
+                        sh "git push http://github.com/gkrishnans/sample-spring-boot-maven-app --tags"                   
                         echo "*3"
                          //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
-
-
                   }
         }
 
