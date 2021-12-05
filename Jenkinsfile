@@ -27,11 +27,26 @@ pipeline {
 
                   echo "Build number is ${currentBuild.number} arun idiot"
                   echo "arun idiot.."//credentialsId: 'd5-ssh-keys'
-                  sshagent (credentials: ['d5-ssh-keys']) {
+
+                withCredentials([gitUsernamePassword(
+                    credentialsId: 'GIT_USER_PASSWORD', 
+                    gitToolName: 'git-tool',
+                    usernameVariable: 'gkrishnans', 
+                    passwordVariable: 'indrajithlove08')]) {
+                        sh "git config user.name 'gkrishnans'"
+                        sh "git config user.email 'gokulakrishnanaji@gmail.com'" 
+                        echo "*1"
+
                         sh "git tag -a built-${currentBuild.number} -m 'helow'"
                         echo "*2"
-                        sh "git push --tags"                   
-                  }
+
+
+                        sh "git push https://github.com/gkrishnans/sample-spring-boot-maven-app --tags"                   
+                        echo "*3"
+
+                         //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
+
+                }
 
         }
 
@@ -39,7 +54,16 @@ pipeline {
 
 
 /**
-                  withCredentials([gitUsernamePassword(credentialsId: 'd5-ssh-keys', gitToolName: 'git-tool')]) {
+
+
+                  sshagent (credentials: ['d5-ssh-keys']) {
+                        sh "git tag -a built-${currentBuild.number} -m 'helow'"
+                        echo "*2"
+                        sh "git push --tags"                   
+                  }
+
+                withCredentials([gitUsernamePassword(credentialsId: 'd5-ssh-keys', gitToolName: 'git-tool',usernameVariable: 'gkrishnans', 
+                passwordVariable: 'indrajithlove08')]) {
                         sh "git config user.name 'gkrishnans'"
                         sh "git config user.email 'gokulakrishnanaji@gmail.com'" 
                         echo "*1"
