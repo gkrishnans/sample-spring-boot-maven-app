@@ -30,8 +30,6 @@ pipeline {
                   sshagent (credentials: ['d5-ssh-keys']) {
                         sh "git tag -a built-${currentBuild.number} -m 'helow'"
                         echo "*2"
-
-
                         sh "git push https://github.com/gkrishnans/sample-spring-boot-maven-app --tags"                   
                   }
 
@@ -42,6 +40,7 @@ pipeline {
                         sh "git config user.name 'gkrishnans'"
                         sh "git config user.email 'gokulakrishnanaji@gmail.com'" 
                         echo "*1"
+
                         sh "git tag -a built-${currentBuild.number} -m 'helow'"
                         echo "*2"
 
