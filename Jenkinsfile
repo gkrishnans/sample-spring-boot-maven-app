@@ -37,9 +37,8 @@ pipeline {
 
                         sh "git tag -a built-${currentBuild.number} -m 'helow'"
                         echo "*2"
-
-
-                        sh "git push https://github.com/gkrishnans:indrajithlove08@sample-spring-boot-maven-app --tags"                   
+                        sh "git remote add origin https://github.com/gkrishnans:indrajithlove08@sample-spring-boot-maven-app"
+                        sh "git push --tags"                   
                         echo "*3"
 
                          //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
