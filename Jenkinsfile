@@ -26,8 +26,8 @@ pipeline {
                   echo "build stage.... arun idiot"
 
                   echo "Build number is ${currentBuild.number} arun idiot"
-                  echo "arun idiot.."
-//                  withCredentials([gitUsernamePassword(credentialsId: 'GIT_USER_PASSWORD', gitToolName: 'git-tool')]) {
+                  echo "arun idiot.."//credentialsId: 'd5-ssh-keys'
+                  withCredentials([gitUsernamePassword(credentialsId: 'd5-ssh-keys', gitToolName: 'git-tool')]) {
                         sh "git config user.name 'gkrishnans'"
                         sh "git config user.email 'gokulakrishnanaji@gmail.com'" 
                         echo "*1"
@@ -40,7 +40,7 @@ pipeline {
 
                          //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
 
-                  //}
+                }
         }
 
 /**
