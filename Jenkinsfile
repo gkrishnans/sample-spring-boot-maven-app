@@ -32,7 +32,7 @@ pipeline {
                     credentialsId: 'GIT_USER_PASSWORD', 
                     gitToolName: 'git-tool',
                     usernameVariable: 'gkrishnans', 
-                    passwordVariable: 'indrajithlove08')]) {
+                    )]) {
                         sh "git config user.name 'gkrishnans'"
                         sh "git config user.email 'gokulakrishnanaji@gmail.com'" 
                         echo "*1"
@@ -45,6 +45,7 @@ pipeline {
                         echo "*3"
 
                          //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
+
 
 
                 }
