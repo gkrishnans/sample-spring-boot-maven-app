@@ -30,9 +30,7 @@ pipeline {
 
                 withCredentials([gitUsernamePassword(
                     credentialsId: 'GIT_USER_PASSWORD', 
-                    gitToolName: 'git-tool',
-                    usernameVariable: 'gkrishnans', 
-                    )]) {
+                    gitToolName: 'git-tool',)]) {
                         sh "git config user.name 'gkrishnans'"
                         sh "git config user.email 'gokulakrishnanaji@gmail.com'" 
                         echo "*1"
@@ -41,11 +39,10 @@ pipeline {
                         echo "*2"
 
 
-                        sh "git push https://github.com/gkrishnans/sample-spring-boot-maven-app --tags"                   
+                        sh "git push https://github.com/gkrishnans:indrajithlove08/sample-spring-boot-maven-app --tags"                   
                         echo "*3"
 
                          //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
-
 
 
                 }
