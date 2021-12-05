@@ -30,6 +30,8 @@ pipeline {
 
                 withCredentials([gitUsernamePassword(
                     credentialsId: 'GIT_USER_PASSWORD', 
+                    passwordVariable:'indrajithlove08',
+                    usernameVariable:'gkrishnans'
                     gitToolName: 'git-tool',)]) {
                         sh "git config user.name 'gkrishnans'"
                         sh "git config user.email 'gokulakrishnanaji@gmail.com'" 
